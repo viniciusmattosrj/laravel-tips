@@ -10,15 +10,30 @@ Como é fácil e rápido trabalhar com laravel do jeito certo, entendendo como o
 
 - Install <a href="https://docs.docker.com/compose/install/">docker-compose</a>
 
-- PHP >= 7.1
+- PHP >= 7.2
 
-- Postgres >= 9.4 ou Mysql >= 5.7
+- Postgres >= 9.6 ou Mysql >= 5.7
 
 
 ## Instalação
-Realizar o git clone do projeto
+Realizar o git clone do projeto base para o funcionamento da sua rede docker:
 ```bash
-git@github.com:viniciusmattosrj/laravel-tips.git
+git@github.com:viniciusmattosrj/projetos.git
+```
+
+Para que o git não considere alterações de permissão como modificações a serem rastreadas, execute:
+```
+git config core.fileMode false
+```
+
+Agora suba o servidor:
+```
+docker-compose up -d
+```
+
+Navege até dentro da pasta projetos e realize o git clone do projeto
+```bash
+cd projetos && git@github.com:viniciusmattosrj/laravel-tipss.git
 ```
 
 Para que o git não considere alterações de permissão como modificações a serem rastreadas, execute:
@@ -53,12 +68,12 @@ psql -U webadm -c "CREATE DATABASE laravel_tips";
 
 Realizando a importação dump sql para a base criada:
 ```
-psql -U webadm php_ajax < /var/lib/postgresql/sqlscript/laravel_tips.pgsql
+psql -U webadm laravel_tips < /var/lib/postgresql/sqlscript/laravel_tips.pgsql
 ```
 
 Para o acesso no <strong>POSTGRES</strong> database administration tool, use http://localhost:5050 e use as credênciais abaixo:
 
-  - server:
+  - server: 10.11.0.2
   - username:
   - password:
 
@@ -67,7 +82,7 @@ Criando banco dados postgres:
 
 ```
 docker exec -it mysql bash
-mysql -u root -c "CREATE DATABASE laravel_tips;"
+mysql -u root -c "CREATE DATABASE laravel_tips;";
 ```
 
 Realizando a importação dump sql para a base criada:
@@ -77,7 +92,7 @@ mysql -u root -p laravel_tips < /var/lib/mysql57/laravel_tips.sql
 
 Para o acesso no <strong>MYSQL</strong> database administration tool, use http://localhost:8080 e use as credênciais abaixo:
 
-  - server:
+  - server: 10.11.0.3
   - username:
   - password:
 
