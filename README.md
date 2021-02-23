@@ -1,10 +1,10 @@
-# Sobre o Projeto
+## Sobre o Projeto
 
 Como é fácil e rápido trabalhar com laravel do jeito certo, entendendo como o framework funciona e a encaixar cada peça para desenvolver projetos profissionais, seguros, escaláveis e de alto valor no menor tempo possível
 - <a href="https://www.youtube.com/playlist?list=PLi_gvjv-JgXqop7hgVKZMGPiT9rUYy1srs">LARAVEL TIPS</a> - Gustavo Web
 
 
-## Requerimentos
+#### Requerimentos
 
 - Install <a href="https://docs.docker.com/install/">Docker</a>
 
@@ -12,12 +12,12 @@ Como é fácil e rápido trabalhar com laravel do jeito certo, entendendo como o
 
 - PHP >= 7.2
 
-- Postgres >= 9.6 ou Mysql >= 5.7
+- Postgres >= 11 ou Mysql >= 5.7
 
 
-## Instalação
+#### Instalação
 Realizar o git clone do projeto base para o funcionamento da sua rede docker:
-```bash
+```
 git@github.com:viniciusmattosrj/projetos.git
 ```
 
@@ -43,7 +43,7 @@ git config core.fileMode false
 
 Entre pelo terminal na pasta do projeto e rode:
 ```
-cp ./docker-compose-example.php  ./docker-compose.php
+cp -v ./docker-compose-example.php  ./docker-compose.php
 ```
 
 Agora suba o servidor:
@@ -97,10 +97,10 @@ Para o acesso no <strong>MYSQL</strong> database administration tool, use http:/
   - password:
 
 
-## Contribuições
+#### Contribuições
 Caso identifique pontos
 que possam ser aprimorados envie o seu PR. ;-)
 
 
-## License
+#### License
 [MIT](https://choosealicense.com/licenses/mit/)
